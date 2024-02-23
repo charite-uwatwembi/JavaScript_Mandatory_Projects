@@ -2,7 +2,6 @@
 
 const todoList = [];
 
-// Function to add tasks to the ToDo list with specified categories
 const addTask = (task, category) => {
     const newTask = {
         task: task,
@@ -13,7 +12,7 @@ const addTask = (task, category) => {
     console.log(`Task '${task}' added to the '${category}' category.`);
 };
 
-// Function to display tasks grouped by their categories
+
 const displayTasksByCategory = () => {
     const tasksByCategory = {};
 
@@ -34,7 +33,6 @@ const displayTasksByCategory = () => {
     }
 };
 
-// Function to mark tasks as completed
 const markTaskAsCompleted = (task) => {
     const foundTask = todoList.find(item => item.task === task);
     if (foundTask) {
@@ -45,7 +43,7 @@ const markTaskAsCompleted = (task) => {
     }
 };
 
-// Function to remove tasks from the list
+
 const removeTask = (task) => {
     const index = todoList.findIndex(item => item.task === task);
     if (index !== -1) {
@@ -56,22 +54,18 @@ const removeTask = (task) => {
     }
 };
 
-// Example usage:
-
-// Adding tasks to the ToDo list with specified categories
 addTask('Buy groceries', 'Personal');
 addTask('Finish project', 'Work');
 addTask('Exercise', 'Personal');
 addTask('Read book', 'Personal');
 
-// Displaying tasks grouped by categories
+
 displayTasksByCategory();
 
-// Marking a task as completed
 markTaskAsCompleted('Buy groceries');
 
-// Removing a task from the ToDo list
+
 removeTask('Exercise');
 
-// Displaying tasks grouped by categories after modification
+
 displayTasksByCategory();
